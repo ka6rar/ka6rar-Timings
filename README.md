@@ -1,40 +1,32 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+# timings
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/tools/pub/writing-package-pages).
+بكج Flutter/Dart يعرض مواقيت الصلاة اليومية حسب الدولة والموقع الذي يقيم فيه المستخدم.
 
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/to/develop-packages).
--->
+## ✅ الميزات
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+- جلب مواقيت الصلاة (الفجر، الشروق، الظهر، المغرب، العشاء)
+- جلب التاريخ الهجري والميلادي
+- جلب اسم الدولة والمدينة تلقائيًا
 
-## Features
+## 🧑‍💻 الاستخدام
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+أضف البكج إلى ملف pubspec.yaml:
 
-## Getting started
+```yaml
+dependencies:
+  timings:
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
 
-## Usage
+  final timings = Timings();
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
+  print(await timings.getRegionCity());       // اسم المدينة
+  print(await timings.getCodeCountry());      // رمز الدولة
+  print(await timings.getTimeFajr());         // وقت الفجر
+  print(await timings.getTimeSunrise());      // وقت الشروق
+  print(await timings.getTimeDhuhr());        // وقت الظهر
+  print(await timings.getTimeMaghrib());      // وقت المغرب
+  print(await timings.getTimeIsha());         // وقت العشاء
+  print(await timings.getDateEn());           // التاريخ الميلادي
+  print(await timings.getDateHijriDate());    // التاريخ الهجري
+  print(await timings.getDateHijriWeekDay()); // يوم الأسبوع الهجري
 
-```dart
-const like = 'sample';
-```
-
-## Additional information
-
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
-# ka6rar-Timings
