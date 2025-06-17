@@ -1,7 +1,7 @@
 name: timings
-description: "A new Flutter project."
+description: "Prayer Times Package with Some Features This is a prayer times package with some extra features."
 version: 0.0.1
-homepage:
+homepage: https://github.com/ka6rar/ka6rar-Timings
 
 environment:
   sdk: ^3.8.1
